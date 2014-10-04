@@ -18,14 +18,3 @@ when "amazon"
   end
 end
 
-case node['platform_family']
-when "rhel"
-  service "mysqld" do
-    action :restart
-  end
-when "debian"
-  service "mysql" do
-    action :restart
-  end
-end
-
